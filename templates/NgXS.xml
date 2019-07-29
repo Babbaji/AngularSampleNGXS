@@ -1,0 +1,41 @@
+<templateSet group="NgXS">
+  <template name="Action Interface" value="export class $NomeAction$ {&#10;  static readonly type = '[$NomeState$] $SpacedNomeAction$';&#10;  constructor() {}&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NomeAction" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="NomeState" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SpacedNomeAction" expression="" defaultValue="spaceSeparated(NomeAction)" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="Action Payload" value="@Action($NomeAction$)&#10;$DecapNomeAction$({patchState, getState, dispatch, setState}: StateContext&lt;$nomeClasse$Model&gt;, {payload}: $NomeAction$) {&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NomeAction" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DecapNomeAction" expression="" defaultValue="decapitalize(NomeAction)" alwaysStopAt="false" />
+    <variable name="nomeClasse" expression="" defaultValue="jsClassName()" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="State" value="import {Action, State, StateContext} from '@ngxs/store';&#10;&#10;export interface $NomeModel$Model {&#10;  $properties$&#10;}&#10;&#10;@State&lt;$NomeModel$Model&gt;({&#10;  name: '$nomeModel$',&#10;  defaults: {&#10;    $properties$&#10;  }&#10;})&#10;export class $NomeModel$State {&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NomeModel" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="properties" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="nomeModel" expression="" defaultValue="decapitalize(NomeModel)" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="Action Senza Payload" value="@Action($NomeAction$)&#10;$DecapNomeAction$({patchState, getState, dispatch, setState}: StateContext&lt;$nomeClasse$Model&gt;) {&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NomeAction" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DecapNomeAction" expression="" defaultValue="decapitalize(NomeAction)" alwaysStopAt="false" />
+    <variable name="nomeClasse" expression="" defaultValue="jsClassName()" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="Select" value="@Select(state =&gt; state.$stateName$.$property$) $property$$;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="stateName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="property" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>

@@ -1,0 +1,9 @@
+<templateSet group="TypeScript">
+  <template name="route" value="&#10;export const $nome$RoutesNames = {&#10;  $nome$Module: '$route$'&#10;};" description="" toReformat="false" toShortenFQNames="false">
+    <variable name="nome" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="route" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>

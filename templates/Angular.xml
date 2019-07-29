@@ -1,0 +1,11 @@
+<templateSet group="Angular">
+  <template name="a-storage-variable" value="// metodi per gestire $descr$ $var$&#10;  set$Descr$$Var$($var$: $Var$) {&#10;    localStorage.setItem(this.$descr$$Var$, JSON.stringify($var$));&#10;  }&#10;  get$Descr$$Var$(): $Var$ {&#10;    return JSON.parse(localStorage.getItem(this.$descr$$Var$));&#10;  }&#10;  remove$Descr$$Var$() {&#10;    localStorage.removeItem(this.$descr$$Var$);&#10;  }&#10; // fine metodi per gestire $descr$ $var$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="descr" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Descr" expression="" defaultValue="capitalize(descr)" alwaysStopAt="false" />
+    <variable name="Var" expression="" defaultValue="capitalize(var)" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>

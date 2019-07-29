@@ -1,0 +1,9 @@
+<templateSet group="HTML/XML">
+  <template name="Alert Errore" value="&lt;div class=&quot;alert alert-danger&quot; *ngIf=&quot;!$nomeVariabile$.valid &amp;&amp; $nomeVariabile$.touched&quot;&gt;&#10;   $spacedVariable$ richiesto!&#10;&lt;/div&gt;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="nomeVariabile" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="spacedVariable" expression="" defaultValue="capitalize(spaceSeparated(nomeVariabile))" alwaysStopAt="false" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+</templateSet>
